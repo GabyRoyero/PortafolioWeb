@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #222222; /* Fondo oscuro */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #444;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: white;
+            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .button:hover {
+            background-color: #6a1b9a; /* Color brillante cuando pasa el mouse */
+            box-shadow: 0 0 10px rgba(106, 27, 154, 0.7); /* Efecto de sombra luminosa */
+        }
+
+        .button:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .button:hover {
+            border-color: transparent;
+            animation: rainbow-border 1.5s infinite linear;
+        }
+
+        /* Animación arcoíris */
+        @keyframes rainbow-border {
+            0% {
+                border-color: #ff0000;
+            }
+            14% {
+                border-color: #ff7f00;
+            }
+            28% {
+                border-color: #ffff00;
+            }
+            42% {
+                border-color: #00ff00;
+            }
+            57% {
+                border-color: #0000ff;
+            }
+            71% {
+                border-color: #4b0082;
+            }
+            85% {
+                border-color: #8b00ff;
+            }
+            100% {
+                border-color: #ff0000;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Mi Primera Página Web</h1>
+    <button class="button">Pregunta 1</button>
+    <button class="button">Pregunta 2</button>
+    <button class="button">Pregunta 3</button>
+
+</body>
+</html>
