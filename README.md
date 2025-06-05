@@ -11,6 +11,7 @@
 - HTML
 - CSS
 - Python
+- Java
 
 ---
 ⭐ Siempre aprendiendo para cumplir mis sueños.
